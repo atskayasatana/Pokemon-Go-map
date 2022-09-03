@@ -25,6 +25,13 @@ conda create -n имя_окружения python=3.6 anaconda
 conda activate имя_окружения
 ```
 
+Переходим в папку проекта и устанавливаем библиотеки из файла requirements.txt
+
+```
+pip install -r requiremets.txt
+```
+
+
 
 
 

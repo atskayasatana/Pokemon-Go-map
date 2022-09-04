@@ -48,6 +48,7 @@ python manage.py runserver
 ```
 
 Перед нами появится пустая карта Москвы:
+![](https://github.com/atskayasatana/Images/blob/cdbb28c2e636fcd8662b8a76e1ab5c40fa273fba/Moscow_empty_card.png)
 
 
 

@@ -48,6 +48,7 @@ python manage.py runserver
 ```
 
 Перед нами появится пустая карта Москвы:
+
 ![](https://github.com/atskayasatana/Images/blob/cdbb28c2e636fcd8662b8a76e1ab5c40fa273fba/Moscow_empty_card.png)
 
 ## Добавление покемонов на карту
@@ -59,8 +60,11 @@ python manage.py runserver
 python manage.py createsuperuser
 ```
 Заполняем имя пользователя(либо оставляем имя по умолчанию), email, пароль:
+
 ![](https://github.com/atskayasatana/Images/blob/7babad4221e8ad1b9027fd5505a001ffad48f5a4/create_super_user.png) 
+
 Если всё в порядке, то появится сообщение: Superuser created successfully.
+
 Запускаем сервер снова:
 ```
 python manage.py runserver
@@ -117,7 +121,19 @@ python manage.py runserver
  * Уровень, здоровье, сила, защита, выносливость : необязательные поля - дополнительные характеристики покемона
  
  Например, появление Бульбазавра на карте может быть описано так:
+ 
  ![](https://github.com/atskayasatana/Images/blob/f2f46be8fcdf6cafb0da922ba7f595ce4fab10fc/Bulbasaur_entity.png)
+ 
+ После внесения данных о всех появлениях покемоны появятся на карте:
+ 
+ ![](https://github.com/atskayasatana/Images/blob/d9827cfa6f8a55f697da81ec08279695b3ae4222/P_main_wt_pmons.png)
+ 
+ На странице каждого их покемонов появится на карте можно увидеть положение данного покемона:
+ 
+ ![](https://github.com/atskayasatana/Images/blob/d9827cfa6f8a55f697da81ec08279695b3ae4222/Ivizavr.png)
+ 
+ 
+ 
  
  
  

@@ -50,6 +50,57 @@ python manage.py runserver
 Перед нами появится пустая карта Москвы:
 ![](https://github.com/atskayasatana/Images/blob/cdbb28c2e636fcd8662b8a76e1ab5c40fa273fba/Moscow_empty_card.png)
 
+## Добавление покемонов на карту
+
+Покемонов и их местоположение на карте удобнее добавлять через админку сайта.
+
+Создадим администратора:
+```
+python manage.py createsuperuser
+```
+Заполняем имя пользователя(либо оставляем имя по умолчанию), email, пароль:
+![](https://github.com/atskayasatana/Images/blob/7babad4221e8ad1b9027fd5505a001ffad48f5a4/create_super_user.png) 
+Если всё в порядке, то появится сообщение: Superuser created successfully.
+Запускаем сервер снова:
+```
+python manage.py runserver
+```
+Переходим в админку http://127.0.0.1:8000/admin/
+
+В появившемся окне вводим логин и пароль созданного суперпользователя:
+
+![](https://github.com/atskayasatana/Images/blob/07b21ef2c499c5787c363f2a415a0c80f1d21018/django_admin.png)
+
+Админка сайта выглядит так:
+
+![](https://github.com/atskayasatana/Images/blob/07b21ef2c499c5787c363f2a415a0c80f1d21018/django_admin_1.png)
+
+### Pokemon 
+
+ Модель для описания покемона, содержит в себе информацию о каждой особи:
+ 
+ * Название покемона на трёх языках: русское название обязательно, остальные - по желанию
+ * Фото покемона - обязательно
+ * Описание покемона - обязательно
+ * Ссылка на фото - необязательное поле
+ * Эволюция покемона(в кого превращается) - необязательное, может оставаться незаполненным, если у покемона нет дальнейшей эволюции.
+ 
+ Информацию о покемонах можно взять отсюда: https://pokemon.fandom.com/
+ 
+ Информация о бульбазавре выглядит так:
+ ![](https://github.com/atskayasatana/Images/blob/f467ad4594f9c5ee0db34dd2022f191664348b97/Bulbasaur_info.png)
+ 
+ 
+
+ 
+ 
+ 
+
+
+
+
+
+
 
 
 

@@ -31,6 +31,25 @@ conda activate имя_окружения
 pip install -r requiremets.txt
 ```
 
+Запустим миграцию моделей на локальную машину:
+
+```
+python manage.py makemigrations
+```
+
+```
+python manage.py migrate
+```
+
+После этого можно запустить локальный сервер:
+
+```
+python manage.py runserver
+```
+
+Перед нами появится пустая карта Москвы:
+
+
 
 
 

@@ -1,5 +1,6 @@
 import folium
 
+from django.shortcuts import get_object_or_404
 from django.shortcuts import render
 from django.utils.timezone import localtime
 
@@ -83,13 +84,11 @@ def show_pokemon(request, pokemon_id):
             pokemon_entity.pokemon.photo.path,
         )
 
-    pokemon = Pokemon.objects.filter(id=pokemon_id)[0]
+    pokemon = get_object_or_404(Pokemon, id=pokemon_id)
 
-    pokemon.previous_evolution = Pokemon.objects.filter(
-        evolution=pokemon
-    ).first()
+    pokemon.previous_evolution = pokemon.evolutions.first()
 
-    pokemon.next_evolution = pokemon.evolution
+    pokemon.next_evolution = pokemon.descendant
 
     return render(
         request,

@@ -85,8 +85,6 @@ def show_pokemon(request, pokemon_id):
             pokemon_entity.pokemon.photo.path,
         )
 
-    pokemon = get_object_or_404(Pokemon, id=pokemon_id)
-
     pokemon.previous_evolution = pokemon.evolutions.first()
 
     pokemon.next_evolution = pokemon.descendant

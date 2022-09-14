@@ -19,12 +19,6 @@ class Pokemon(models.Model):
     description = models.TextField(blank=True,
                                    verbose_name="Описание покемона"
                                     )
-    img_url = models.CharField(
-        max_length=200,
-        null=True,
-        blank=True,
-        verbose_name="Ссылка на фото покемона",
-        )
     descendant = models.ForeignKey(
         'self',
         on_delete=models.PROTECT,
@@ -46,7 +40,7 @@ class PokemonEntity(models.Model):
                                 Pokemon,
                                 on_delete=models.CASCADE,
                                 verbose_name="Покемон",
-                                related_name='pokemon_name'
+                                related_name='entities'
                                  )
     appeared_at = models.DateTimeField(
                                        default=timezone.now,

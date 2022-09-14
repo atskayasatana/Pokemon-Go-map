@@ -50,7 +50,6 @@ def show_all_pokemons(request):
     pokemons_on_page = []
 
     for pokemon in Pokemon.objects.all():
-        print(pokemon.photo.url)
         pokemons_on_page.append(
             {
                 "pokemon_id": pokemon.id,
@@ -71,7 +70,9 @@ def show_all_pokemons(request):
 
 def show_pokemon(request, pokemon_id):
 
-    pokemon_entities = PokemonEntity.objects.filter(pokemon__id=pokemon_id)
+    pokemon = get_object_or_404(Pokemon, id=pokemon_id)
+    
+    pokemon_entities = pokemon.entities.all()
 
     folium_map = folium.Map(location=MOSCOW_CENTER, zoom_start=12)
 
